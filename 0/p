@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 102946; //Initial pressure in Pa (Huntsville ambient)
+
+boundaryField
+{
+    Inlet
+    {
+        type            totalPressure; //is should be fine but if errors check totalPressure!	
+	p0 		uniform 537316; 
+	value 		uniform 537316;
+    }
+
+    Outlet
+    {
+        type            fixedValue;   //ybe zero gradient? maybe check supersonic solver boundary pressure condition!!
+        value 		uniform 102946;
+    }
+
+    Walls
+    {
+    	type 		zeroGradient; 
+    }
+
+    symPlane
+    {
+    	type 		symmetryPlane; 
+    }
+}
+
+
+// ************************************************************************* //
