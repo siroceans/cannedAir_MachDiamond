@@ -20,24 +20,24 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    Inlet
+    inlet
     {
         type            zeroGradient;
     }
 
-    Outlet
+    outlet
     {
         type            zeroGradient; // maybe the supersonic solver has a better one! for supersonic flow outlet
     }
 
-    symPlane
+    freestreamInlet
     {
-    	type		symmetryPlane; 
+        type            zeroGradient;
     }
 
-    Walls
+    freestream
     {
-    	type		slip; 
+        type            zeroGradient;
     }
 }
 

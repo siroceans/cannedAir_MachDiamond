@@ -20,27 +20,32 @@ internalField   uniform 102946; //Initial pressure in Pa (Huntsville ambient)
 
 boundaryField
 {
-    Inlet
+    inlet
     {
         type            totalPressure; //is should be fine but if errors check totalPressure!	
-	p0 		uniform 537316; 
-	value 		uniform 537316;
+	    p0 		        uniform 550000; 
+	    value 		    uniform 550000;
     }
 
-    Outlet
+    outlet
     {
-        type            fixedValue;   //ybe zero gradient? maybe check supersonic solver boundary pressure condition!!
-        value 		uniform 102946;
+        type            totalPressure;
+        p0              uniform 102946;
+        value 		    uniform 102946;
     }
 
-    Walls
+    freestreamInlet
     {
-    	type 		zeroGradient; 
+        type            totalPressure;
+        p0              uniform 102946;
+        value 		    uniform 102946;
     }
 
-    symPlane
+    freestream 
     {
-    	type 		symmetryPlane; 
+        type            totalPressure;
+        p0              uniform 102946;
+        value 		    uniform 102946;
     }
 }
 
