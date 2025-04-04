@@ -1,54 +1,54 @@
-/*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2406                                  |
-|   \\  /    A nd           | Website:  www.openfoam.com                      |
-|    \\/     M anipulation  |                                                 |
-\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
-    arch        "LSB;label=32;scalar=64";
     class       polyBoundaryMesh;
     location    "constant/polyMesh";
     object      boundary;
 }
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-5
+7         
 (
-    inlet
+    FreestreamLeft
     {
-        type            patch;
-        nFaces          100;
-        startFace       233090;
+        type patch;
+        nFaces 98;
+        startFace 206649;
     }
-    outlet
+    FreestreamTop
     {
-        type            patch;
-        nFaces          8100;
-        startFace       233190;
+        type patch;
+        nFaces 996;
+        startFace 206747;
     }
-    freestreamInlet
+    Inlet
     {
-        type            patch;
-        nFaces          8000;
-        startFace       241290;
+        type patch;
+        nFaces 48;
+        startFace 207743;
     }
-    freestream
+    Outlet
     {
-        type            patch;
-        nFaces          2000;
-        startFace       249290;
+        type patch;
+        nFaces 140;
+        startFace 207791;
     }
-    frontback
+    Wall
     {
-        type            empty;
-        inGroups        1(empty);
-        nFaces          1620;
-        startFace       251290;
+        type wall;
+        nFaces 1642;
+        startFace 207931;
+    }
+    Wedge1
+    {
+        type wedge;
+        nFaces 41841;
+        startFace 209573;
+    }
+    Wedge2
+    {
+        type wedge;
+        nFaces 41841;
+        startFace 251414;
     }
 )
-
-// ************************************************************************* //

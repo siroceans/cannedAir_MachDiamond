@@ -30,7 +30,11 @@ divSchemes
 {
     default         none;
 
+    div(phi,U)      Gauss limitedLinear 1;
+    div(phi,e)      Gauss limitedLinear 1;
+
     div(tauMC)      Gauss linear;
+    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
 }
 
 laplacianSchemes

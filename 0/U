@@ -20,24 +20,39 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
-    inlet
+    Inlet
     {
         type            zeroGradient;
     }
 
-    outlet
+    Outlet
     {
         type            zeroGradient; // maybe the supersonic solver has a better one! for supersonic flow outlet
     }
 
-    freestreamInlet
+    FreestreamLeft 
     {
         type            zeroGradient;
     }
 
-    freestream
+    FreestreamTop
     {
         type            zeroGradient;
+    }
+
+    Wall
+    {
+    	type 		zeroGradient; 
+    }
+
+    Wedge1
+    {
+        type            wedge;
+    }
+
+    Wedge2
+    {
+        type            wedge;
     }
 }
 
