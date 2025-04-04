@@ -20,33 +20,39 @@ internalField   uniform 102946; //Initial pressure in Pa (Huntsville ambient)
 
 boundaryField
 {
-    inlet
+    Inlet
     {
         type            totalPressure; //is should be fine but if errors check totalPressure!	
-	    p0 		        uniform 550000; 
-	    value 		    uniform 550000;
+	p0 		        uniform 550000; 
+	value 		    uniform 550000;
     }
 
-    outlet
+    Outlet
     {
         type            totalPressure;
         p0              uniform 102946;
         value 		    uniform 102946;
     }
 
-    freestreamInlet
+    FreestreamLeft
     {
         type            totalPressure;
         p0              uniform 102946;
         value 		    uniform 102946;
     }
 
-    freestream 
+    FreestreamTop 
     {
         type            totalPressure;
         p0              uniform 102946;
         value 		    uniform 102946;
     }
+    
+    Wall
+    {
+    	type		zeroGradient; 
+    }
+
 }
 
 

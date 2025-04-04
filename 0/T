@@ -20,7 +20,7 @@ internalField   uniform 293;
 
 boundaryField
 {
-    inlet
+    Inlet
     {
         type            totalTemperature;
         T0              uniform 293;
@@ -28,12 +28,12 @@ boundaryField
         value           uniform 293;
     }
 
-    outlet
+    Outlet
     {
         type            zeroGradient;
     }
 
-    freestreamInlet
+    FreestreamLeft
     {
         type            totalTemperature;
         T0              uniform 293;
@@ -41,12 +41,17 @@ boundaryField
         value           uniform 293;
     }
 
-    freestream
+    FreestreamTop
     {
         type            totalTemperature;
         T0              uniform 293;
         gamma           1.4;
         value           uniform 293;
+    }
+
+    Wall
+    {
+    	type		zeroGradient; 
     }
 }
 // ************************************************************************* //
