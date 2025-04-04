@@ -53,6 +53,18 @@ boundaryField
     	type		zeroGradient; 
     }
 
+    Wedge1
+    {
+        type            wedge;
+        value           uniform 101325;  // or match the ambient pressure
+    }
+
+    Wedge2
+    {
+        type            wedge;
+        value           uniform 101325;
+    }
+
 }
 
 

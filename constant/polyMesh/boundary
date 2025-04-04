@@ -1,0 +1,54 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+
+7         
+(
+    FreestreamLeft
+    {
+        type patch;
+        nFaces 98;
+        startFace 206649;
+    }
+    FreestreamTop
+    {
+        type patch;
+        nFaces 996;
+        startFace 206747;
+    }
+    Inlet
+    {
+        type patch;
+        nFaces 48;
+        startFace 207743;
+    }
+    Outlet
+    {
+        type patch;
+        nFaces 140;
+        startFace 207791;
+    }
+    Wall
+    {
+        type wall;
+        nFaces 1642;
+        startFace 207931;
+    }
+    Wedge1
+    {
+        type wedge;
+        nFaces 41841;
+        startFace 209573;
+    }
+    Wedge2
+    {
+        type wedge;
+        nFaces 41841;
+        startFace 251414;
+    }
+)

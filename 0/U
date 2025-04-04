@@ -44,6 +44,16 @@ boundaryField
     {
     	type 		zeroGradient; 
     }
+
+    Wedge1
+    {
+        type            wedge;
+    }
+
+    Wedge2
+    {
+        type            wedge;
+    }
 }
 
 
